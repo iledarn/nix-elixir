@@ -24,7 +24,7 @@ defmodule BirdCount do
   end
 
   def total(list) do
-    # Please implement the total/1 function
+    Enum.reduce(list, 0, fn(x, acc) -> x + acc end)
   end
 
   def busy_days(list) do
