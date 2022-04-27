@@ -24,10 +24,12 @@ defmodule BirdCount do
   end
 
   def total(list) do
-    Enum.reduce(list, 0, fn(x, acc) -> x + acc end)
+    Enum.reduce(list, 0, fn x, acc -> x + acc end)
   end
 
   def busy_days(list) do
-    # Please implement the busy_days/1 function
+    list
+    |> Enum.filter(fn x -> x >= 5 end)
+    |> Enum.reduce(0, fn x, acc -> 1 + acc end)
   end
 end
