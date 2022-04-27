@@ -11,6 +11,8 @@ I have been using nix as my default development environment for my projects for 
 
 [nix-shell for elixir projects (Apr 13, 2020)](https://til.codes/nix-shell-for-elixir-projects/?debug=0).
 
+[Nix vs asdf for Elixir version management](https://elixirforum.com/t/nix-vs-asdf-for-elixir-version-management/15973).
+
 ## Usage
 
 ```
