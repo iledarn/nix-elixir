@@ -7,8 +7,12 @@ defmodule BirdCount do
     head
   end
 
-  def increment_day_count(list) do
-    # Please implement the increment_day_count/1 function
+  def increment_day_count([]) do
+    [1]
+  end
+
+  def increment_day_count([head | tail]) do
+    [head + 1 | tail]
   end
 
   def has_day_without_birds?(list) do
