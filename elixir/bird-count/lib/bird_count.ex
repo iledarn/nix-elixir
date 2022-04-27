@@ -34,9 +34,14 @@ defmodule BirdCount do
     total(tail) + head
   end
 
-  def busy_days(list) do
-    list
-    |> Enum.filter(fn x -> x >= 5 end)
-    |> Enum.reduce(0, fn x, acc -> 1 + acc end)
+  def busy_days([]) do
+    0
+  end
+
+  def busy_days([head | tail]) do
+    case head >= 5 do
+      true -> 1 + busy_days(tail)
+      _ -> busy_days(tail)
+    end
   end
 end
