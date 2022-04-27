@@ -15,8 +15,12 @@ defmodule BirdCount do
     [head + 1 | tail]
   end
 
+  def has_day_without_birds?([]) do
+    false
+  end
+
   def has_day_without_birds?(list) do
-    # Please implement the has_day_without_birds?/1 function
+    Enum.any?(list, fn x -> x == 0 end)
   end
 
   def total(list) do
