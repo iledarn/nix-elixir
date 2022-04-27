@@ -23,8 +23,12 @@ defmodule BirdCount do
     Enum.any?(list, fn x -> x == 0 end)
   end
 
-  def total(list) do
-    Enum.reduce(list, 0, fn x, acc -> x + acc end)
+  def total([]) do
+    0
+  end
+
+  def total([head | tail]) do
+    total(tail) + head
   end
 
   def busy_days(list) do
