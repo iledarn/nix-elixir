@@ -6,7 +6,7 @@ let
   ];
 
   inputs = basePackages
-    ++ lib.optional stdenv.isLinux inotify-tools
+    ++ lib.optional stdenv.isLinux inotify-tools;
 
   # define shell startup command
   hooks = ''
