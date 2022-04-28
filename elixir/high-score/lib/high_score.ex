@@ -21,6 +21,6 @@ defmodule HighScore do
   end
 
   def get_players(scores) do
-    # Please implement the get_players/1 function
+    Map.keys(scores)
   end
 end
