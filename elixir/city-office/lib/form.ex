@@ -1,4 +1,7 @@
 defmodule Form do
+  @moduledoc """
+  A collection of loosely related functions helpful for filling out various forms at the city office.
+  """
   def blanks(n) do
     String.duplicate("X", n)
   end
