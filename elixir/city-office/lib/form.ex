@@ -44,10 +44,16 @@ defmodule Form do
     end
   end
 
+  @type address_map :: %{street: String.t(), postal_code: String.t(), city: String.t()}
+  @type address_tuple :: {street :: String.t(), postal_code :: String.t(), city :: String.t()}
+  @type address :: address_map | address_tuple
+
+  @spec format_address(address) :: String.t()
   def format_address(%{street: street, postal_code: postal_code, city: city}) do
     format_address({street, postal_code, city})
   end
 
+  @spec format_address(address) :: String.t()
   def format_address({street, postal_code, city}) do
     """
     #{String.upcase(street)}
