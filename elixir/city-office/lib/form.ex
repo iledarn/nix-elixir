@@ -2,6 +2,14 @@ defmodule Form do
   @moduledoc """
   A collection of loosely related functions helpful for filling out various forms at the city office.
   """
+
+  @doc """
+  Generates a string of a given length.
+
+  This string can be used to fill out a form field that is supposed to have no value.
+  Such fields cannot be left empty because a malicious third party could fill them out with false data.
+  """
+  @spec blanks(n :: non_neg_integer) :: String.t()
   def blanks(n) do
     String.duplicate("X", n)
   end
