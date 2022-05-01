@@ -52,14 +52,14 @@ defmodule DateParser do
   end
 
   def match_numeric_date() do
-    # Please implement the match_numeric_date/0 function
+    Regex.compile!("^#{capture_numeric_date()}$")
   end
 
   def match_month_name_date() do
-    # Please implement the match_month_name_day/0 function
+    Regex.compile!("^#{capture_month_name_date()}$")
   end
 
   def match_day_month_name_date() do
-    # Please implement the match_day_month_name_date/0 function
+    Regex.compile!("^#{capture_day_month_name_date()}$")
   end
 end
