@@ -12,11 +12,11 @@ defmodule DateParser do
   end
 
   def day_names() do
-    "^Sunday$|^Monday$|^Tuesday$|^Wednesday$|^Thursday$|^Friday$|^Saturday$"
+    "(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)"
   end
 
   def month_names() do
-    "^January$|^February$|^March$|^April$|^May$|^June$|^July$|^August$|^September$|^October$|^November$|^December$"
+    "(January|February|March|April|May|June|July|August|September|October|November|December)"
   end
 
   def capture_day() do
@@ -40,15 +40,15 @@ defmodule DateParser do
   end
 
   def capture_numeric_date() do
-    # Please implement the capture_numeric_date/0 function
+    "#{capture_day()}/#{capture_month()}/#{capture_year()}"
   end
 
   def capture_month_name_date() do
-    # Please implement the capture_month_name_date/0 function
+    "#{capture_month_name()} #{capture_day()}, #{capture_year()}"
   end
 
   def capture_day_month_name_date() do
-    # Please implement the capture_day_month_name_date/0 function
+    "#{capture_day_name()}, #{capture_month_name()} #{capture_day()}, #{capture_year()}"
   end
 
   def match_numeric_date() do
