@@ -11,7 +11,7 @@ defmodule Username do
         ?ü -> 'ue'
         ?ß -> 'ss'
         head when head >= 97 and head <= 122 -> [head]
-	head when head == ?_ -> [head]
+	?_ -> '_'
         _ -> ''
       end
 
