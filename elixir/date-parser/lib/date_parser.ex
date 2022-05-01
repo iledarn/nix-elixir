@@ -12,11 +12,11 @@ defmodule DateParser do
   end
 
   def day_names() do
-    # Please implement the day_names/0 function
+    "^Sunday$|^Monday$|^Tuesday$|^Wednesday$|^Thursday$|^Friday$|^Saturday$"
   end
 
   def month_names() do
-    # Please implement the month_names/0 function
+    "^January$|^February$|^March$|^April$|^May$|^June$|^July$|^August$|^September$|^October$|^November$|^December$"
   end
 
   def capture_day() do
