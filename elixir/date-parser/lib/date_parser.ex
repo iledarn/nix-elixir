@@ -20,23 +20,23 @@ defmodule DateParser do
   end
 
   def capture_day() do
-    # Please implement the capture_day/0 function
+    "(?<day>#{day()})"
   end
 
   def capture_month() do
-    # Please implement the capture_month/0 function
+    "(?<month>#{month()})"
   end
 
   def capture_year() do
-    # Please implement the capture_year/0 function
+    "(?<year>#{year()})"
   end
 
   def capture_day_name() do
-    # Please implement the capture_day_name/0 function
+    "(?<day_name>#{day_names()})"
   end
 
   def capture_month_name() do
-    # Please implement the capture_month_name/0 function
+    "(?<month_name>#{month_names()})"
   end
 
   def capture_numeric_date() do
