@@ -1,5 +1,12 @@
 defmodule TakeANumber do
+  def loop(state) do
+    receive do
+      _ -> loop(state)
+    end
+
+  end
+
   def start() do
-    # Please implement the start/0 function
+    spawn(TakeANumber, :loop, [])
   end
 end
