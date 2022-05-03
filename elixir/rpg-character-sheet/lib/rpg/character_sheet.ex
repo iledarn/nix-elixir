@@ -20,6 +20,11 @@ defmodule RPG.CharacterSheet do
   end
 
   def run() do
-    # Please implement the run/0 function
+    welcome()
+    Map.new()
+    |> Map.put(:name, ask_name())
+    |> Map.put(:class, ask_class())
+    |> Map.put(:level, ask_level())
+    |> IO.inspect(label: "Your character")
   end
 end
