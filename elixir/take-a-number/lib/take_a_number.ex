@@ -5,6 +5,11 @@ defmodule TakeANumber do
         send(sender_pid, state)
         loop(state)
 
+      {:take_a_number, sender_pid} ->
+        state = state + 1
+        send(sender_pid, state)
+        loop(state)
+
       _ ->
         loop(state)
     end
