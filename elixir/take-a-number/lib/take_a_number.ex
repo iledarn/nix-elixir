@@ -10,6 +10,9 @@ defmodule TakeANumber do
         send(sender_pid, state)
         loop(state)
 
+      :stop ->
+        nil
+
       _ ->
         loop(state)
     end
