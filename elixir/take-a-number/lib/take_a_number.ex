@@ -1,12 +1,16 @@
 defmodule TakeANumber do
   def loop(state) do
     receive do
-      _ -> loop(state)
-    end
+      {:report_state, sender_pid} ->
+        send(sender_pid, state)
+        loop(state)
 
+      _ ->
+        loop(state)
+    end
   end
 
   def start() do
-    spawn(TakeANumber, :loop, [])
+    spawn(TakeANumber, :loop, [0])
   end
 end
