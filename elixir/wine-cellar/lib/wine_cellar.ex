@@ -8,7 +8,11 @@ defmodule WineCellar do
   end
 
   def filter(cellar, color, opts \\ []) do
+    year = Keyword.get(opts, :year)
+    country = Keyword.get(opts, :country)
+
     Keyword.get_values(cellar, color)
+    |> filter_by_year(year)
   end
 
   # The functions below do not need to be modified.
