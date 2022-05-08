@@ -1,6 +1,12 @@
 defmodule DNA do
   def encode_nucleotide(code_point) do
-    # Please implement the encode_nucleotide/1 function
+    case code_point do
+      ?A -> 0b0001
+      ?C -> 0b0010
+      ?G -> 0b0100
+      ?T -> 0b1000
+      _ -> 0b0000
+    end
   end
 
   def decode_nucleotide(encoded_code) do
