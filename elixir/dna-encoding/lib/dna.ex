@@ -27,7 +27,10 @@ defmodule DNA do
     <<encode_nucleotide(head)::size(4), <<encode(tail)::bitstring>> >>
   end
 
-  def decode(dna) do
-    # Please implement the decode/1 function
+  def decode(<<>>) do
+    []
+  end
+  def decode(<<value::4, rest::bitstring>>) do
+    [decode_nucleotide(value) | decode(rest)]
   end
 end
